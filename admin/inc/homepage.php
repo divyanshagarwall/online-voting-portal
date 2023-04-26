@@ -1,5 +1,5 @@
 
-<div class="row my-3">  
+<div class="row my-3 " style = "background: #7fb4cb">  
     <div class="col-12">
         <h3>Elections</h3>
         <table class="table">

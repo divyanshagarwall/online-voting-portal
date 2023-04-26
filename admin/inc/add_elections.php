@@ -1,4 +1,3 @@
-
 <?php 
     if(isset($_GET['added']))
     {
@@ -28,7 +27,7 @@
         <h3>Add New Election</h3>
         <form method="POST">
             <div class="form-group">
-                <input type="text" name="election_topic" placeholder="Elction Topic" class="form-control" required />
+                <input type="text" name="election_topic" placeholder="Election Topic" class="form-control" required />
             </div>
             <div class="form-group">
                 <input type="number" name="number_of_candidates" placeholder="No of Candidates" class="form-control" required />
@@ -50,7 +49,7 @@
                 <tr>
                     <th scope="col">S.No</th>
                     <th scope="col">Election Name</th>
-                    <th scope="col"># Candidates</th>
+                    <th scope="col">No. of Candidates</th>
                     <th scope="col">Starting Date</th>
                     <th scope="col">Ending Date</th>
                     <th scope="col">Status </th>
@@ -79,7 +78,7 @@
                                 <td><?php echo $row['status']; ?></td>
                                 <td> 
                                     <button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $election_id; ?>)"> Delete </button>
-                                </td>
+                                </td> 
                             </tr>
                 <?php
                         }
@@ -133,7 +132,6 @@
             $status = "Active";
         }
 
-        // inserting into db
         mysqli_query($db, "INSERT INTO elections(election_topic, no_of_candidates, starting_date, ending_date, status, inserted_by, inserted_on) VALUES('". $election_topic ."', '". $number_of_candidates ."', '". $starting_date ."', '". $ending_date ."', '". $status ."', '". $inserted_by ."', '". $inserted_on ."')") or die(mysqli_error($db));
         
     ?>
@@ -141,10 +139,5 @@
     <?php
 
     }
-
-
-
-
-
 
 ?>

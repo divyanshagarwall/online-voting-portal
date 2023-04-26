@@ -11,7 +11,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +21,9 @@
 </head>
 <body>
     
-    <div class="container-fluid">
-        <div class="row bg-black text-white">
-            <div class="col-1"> 
+    <div class="container-fluid" >
+        <div class="row  text-white" style="background: #72cad1 ">
+            <div class="col-1" style="background: #72cad1 "> 
                 <img src="../assets/images/logo.gif" width="80px"/>
             </div>
             <div class="col-11 my-auto">

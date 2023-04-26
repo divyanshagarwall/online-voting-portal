@@ -1,5 +1,5 @@
 
-    <div class="row bg-black text-center text-white">
+    <div class="row text-center text-white" style="background:#569daa; margin-top: auto;">
         <div class="col-12 my-3">
             <p> &copy; Copyright Vishnani Corps Pvt. Ltd All Rights Reserved
                 

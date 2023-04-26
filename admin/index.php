@@ -15,6 +15,8 @@
     }else if(isset($_GET['viewResult']))
     {
         require_once("inc/viewResults.php");
+    }else if(isset($_GET['managevoters'])){
+        require_once("inc/manage_users.php");
     }
 
 ?>

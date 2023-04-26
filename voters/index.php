@@ -2,10 +2,15 @@
     require_once("inc/header.php");
     require_once("inc/navigation.php");
 ?>
-
+    <head>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    </head>
     <div class="row my-3">
-        <div class="col-12">
-            <h3> Voters Panel </h3>
+    <!-- style="min-height: 100vh; display:flex; flex-direction:column;" -->
+        <!-- <div class="col-12" > -->
+            <h3 style="margin-left: 1%;"> Voters Panel </h3>
 
             <?php 
                 $fetchingActiveElections = mysqli_query($db, "SELECT * FROM elections WHERE status = 'Active'") or die(mysqli_error($db));
@@ -21,12 +26,12 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th colspan="4" class="bg-green text-white"><h5> ELECTION TOPIC: <?php echo strtoupper($election_topic); ?></h5></th>
+                                    <th colspan="4" class="text-white" style="background: #569daa "><h5> ELECTION TOPIC: <?php echo strtoupper($election_topic); ?></h5></th>
                                 </tr>
                                 <tr>
                                     <th> Photo </th>
                                     <th> Candidate Details </th>
-                                    <th> # of Votes </th>
+                                    <th> No. of Votes </th>
                                     <th> Action </th>
                                 </tr>
                             </thead>

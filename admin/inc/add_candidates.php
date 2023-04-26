@@ -109,7 +109,7 @@
                             $fetchingElectionName = mysqli_query($db, "SELECT * FROM elections WHERE id = '". $election_id ."'") or die(mysqli_error($db));
                             $execFetchingElectionNameQuery = mysqli_fetch_assoc($fetchingElectionName);
                             // $election_name = $execFetchingElectionNameQuery['election_topic'];
-
+                            $candidate_id= $row['id'];
                             $candidate_photo = $row['candidate_photo'];
 
                 ?>
@@ -119,9 +119,7 @@
                                 <td><?php echo $row['candidate_name']; ?></td>
                                 <td><?php echo $row['candidate_details']; ?></td>
                                 <td><?php echo $election_name; ?></td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-danger"> Delete </a>
-                                </td>
+                                <td><button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $candidate_id; ?>)"> Delete </button></td>
                             </tr>   
                 <?php
                         }
@@ -137,10 +135,29 @@
         </table>
     </div>
 </div>
+<script>
+    const DeleteData = (c_id) => 
+    {
+        let c = confirm("Are you really want to delete it?");
 
-
-
+        if(c == true)
+        {
+            location.assign("index.php?addCandidatePage=1&delete_id=" + c_id);
+        }
+    }
+</script>
 <?php 
+    if(isset($_GET['delete_id']))
+    {
+        $d_id = $_GET['delete_id'];
+        mysqli_query($db, "DELETE FROM candidate_details WHERE id = '". $d_id ."'") OR die(mysqli_error($db));
+?>
+
+        <div class="alert alert-danger my-3" role="alert">
+            Candidate has been deleted successfully!
+        </div>
+<?php
+    }
 
     if(isset($_POST['addCandidateBtn']))
     {

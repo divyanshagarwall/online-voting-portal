@@ -3,19 +3,21 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #e1f505 !important;
+    background: #72cad1 ;
+    /* background-color: rgb(204, 221, 243); */
 }
 .user_card {
-    height: 400px;
-    width: 350px;
+    height: 500px;
+    width: 450px;
     margin-top: auto;
     margin-bottom: auto;
-    background: #444242;
+    background: #7fb4cb;
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
+    border: 1px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -28,7 +30,7 @@ html {
     width: 170px;
     top: -75px;
     border-radius: 50%;
-    background: #fff;
+    background: #ffe410;
     padding: 10px;
     text-align: center;
 }
@@ -43,7 +45,7 @@ html {
 }
 .login_btn {
     width: 100%;
-    background: #0cf063 !important;
+    background: #0cf01c !important;
     color: white !important;
 }
 .login_btn:focus {
@@ -54,7 +56,7 @@ html {
     padding: 0 2rem;
 }
 .input-group-text {
-    background: #68C230 !important;
+    background: #0cf01c !important;
     color: white !important;
     border: 0 !important;
     border-radius: 0.25rem 0 0 0.25rem !important;
@@ -65,5 +67,8 @@ html {
     outline: 0px !important;
 }
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #68C230 !important;
+    background-color: #0cf01c !important;
+}
+.head123 {
+    background-color: blue;
 }

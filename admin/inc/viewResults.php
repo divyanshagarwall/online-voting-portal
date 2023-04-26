@@ -4,7 +4,7 @@
 ?>
 
 <div class="row my-3">
-        <div class="col-12">
+        <div class="col-12" >
             <h3> Election Results </h3>
 
             <?php 
@@ -21,12 +21,12 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th colspan="4" class="bg-green text-white"><h5> ELECTION TOPIC: <?php echo strtoupper($election_topic); ?></h5></th>
+                                    <th colspan="4" class="text-white" style="background: #569daa"><h5> ELECTION TOPIC: <?php echo strtoupper($election_topic); ?></h5></th>
                                 </tr>
                                 <tr>
                                     <th> Photo </th>
                                     <th> Candidate Details </th>
-                                    <th> # of Votes </th>
+                                    <th> No .of Votes </th>
                                     <!-- <th> Action </th> -->
                                 </tr>
                             </thead>
@@ -65,7 +65,7 @@
 
 
             <hr>
-            <h3>Voting Details</h3>
+            <h3 style="background: #569daa">Voting Details</h3>
             <?php 
                 $fetchingVoteDetails = mysqli_query($db, "SELECT * FROM votings WHERE election_id = '". $election_id ."'");
                 $number_of_votes = mysqli_num_rows($fetchingVoteDetails);
