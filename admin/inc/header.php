@@ -26,7 +26,7 @@
     <div class="container-fluid">
         <div class="row head123 text-white" style="background: #72cad1 ">
             <div class="col-1"> 
-                <img src="../assets/images/logo.gif" width="80px"/>
+                <img src="../assets/images/logo1.gif" width="80px"/>
             </div>
             <div class="col-11 my-auto " >
                 <h3 class="ml-4" style="color:rgb(204, 221, 243)"> ONLINE VOTING SYSTEM  - <small> Welcome  <?php echo $_SESSION['username']; ?></small> </h3>
